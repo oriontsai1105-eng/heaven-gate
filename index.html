@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>黑暗轉生</title>
+</head>
+
+<body>
+
+    <!-- 開始畫面 -->
+
+    <div id="titleScreen">
+
+        <h1>🌑 黑暗轉生</h1>
+
+        <p>一場意外，讓你來到了未知的世界……</p>
+
+        <div style="position: relative; display: inline-block;">
+
+            <!-- 開始畫面背景 -->
+
+            <img src="images/gate.png" width="900">
+
+            <!-- 開始遊戲按鈕 -->
+s
+            <img
+                src="images/start.png"
+                onclick="startGame()"
+                width="150"
+               style="
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    cursor: pointer;
+                "
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- 莉亞鎮 -->
+
+    <div id="town" style="display: none;">
+
+        <h2>🏘️ 莉亞鎮</h2>
+
+        <div style="position: relative; display: inline-block;">
+
+            <!-- 莉亞鎮背景 -->
+
+            <img src="images/town.png" width="900">
+
+
+            <!-- 進入森林 -->
+
+            <img
+                src="images/forest.png"
+                onclick="goToForest()"
+                width="120"
+                style="
+                    position: absolute;
+                    top: 100px;
+                    left: 550px;
+                    cursor: pointer;
+                "
+            >
+
+
+            <!-- 武器店 -->
+
+            <img
+                src="images/weaponstore.png"
+                width="100"
+                style="
+                    position: absolute;
+                    top: 280px;
+                    left: 180px;
+                    cursor: pointer;
+                "
+            >
+
+
+            <!-- 防具店 -->
+
+            <img
+                src="images/armorstore.png"
+                width="120"
+                style="
+                    position: absolute;
+                    top: 250px;
+                    left: 350px;
+                    cursor: pointer;
+                "
+            >
+
+
+            <!-- 道具店 -->
+
+            <img
+                src="images/iteamstore.png"
+                width="120"
+                style="
+                    position: absolute;
+                    top: 250px;
+                    left: 500px;
+                    cursor: pointer;
+                "
+            >
+
+        </div>
+
+        <p>你來到了一個陌生的村莊。</p>
+
+    </div>
+
+
+    <!-- 森林 -->
+
+    <div id="forest" style="display: none;">
+
+        <h2>🌲 森林</h2>
+
+        <p>你走進了莉亞鎮附近的森林。</p>
+
+        <button onclick="backToTown()">
+            返回莉亞鎮
+        </button>
+
+    </div>
+
+
+    <script>
+
+        // 開始遊戲
+
+        function startGame() {
+
+            document.getElementById("titleScreen").style.display = "none";
+
+            document.getElementById("town").style.display = "block";
+
+        }
+
+
+        // 進入森林
+
+        function goToForest() {
+
+            document.getElementById("town").style.display = "none";
+
+            document.getElementById("forest").style.display = "block";
+
+        }
+
+
+        // 返回莉亞鎮
+
+        function backToTown() {
+
+            document.getElementById("forest").style.display = "none";
+
+            document.getElementById("town").style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
